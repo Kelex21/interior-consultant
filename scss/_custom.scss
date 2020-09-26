@@ -2,12 +2,117 @@ html {
     box-sizing: border-box;
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: $black;
+    color: $white;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: $deskto1;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    nav {
+        display: flex;
+        align-items: center;
+        margin: 2rem 5rem;
+        .logo {
+            width: 60%;
+            .box-logo {
+                width: 102px;
+                height: 32px;
+                border: 1px solid $white;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-family: $crimson_pro;
+                    font-weight: 200;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        ul {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            li {
+                list-style: none;
+                a {
+                    font-family: $montserrat;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: $white;
+                    transition: font-weight 0.3s ease;
+                    &:hover {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+section {
+    width: 100%;
+    .box-left {
+        width: 50%;
+        h1 {
+
+        }
+        p {
+
+        }
+        .more {
+
+        }
+        img {
+
+        }
+    }
+    .box-right {
+        width: 50%;
+        image {
+            img {
+
+            }
+        }
+        .info {
+            .person {
+                img {
+
+                }
+                .name {
+
+                }
+                .pro {
+
+                }
+            }
+            .title {
+                h4 {
+
+                }
+            }
+        }
+    }
 }
