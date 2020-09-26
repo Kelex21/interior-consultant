@@ -23,16 +23,18 @@ img {
     width: 100%;
     max-width: $deskto1;
     margin: 0 auto;
+    height: 100vh;
 }
 
 header {
     width: 100%;
+    margin: 0 auto;
     nav {
         display: flex;
         align-items: center;
-        margin: 2rem 5rem;
+        margin: 3rem 10rem;
         .logo {
-            width: 60%;
+            width: 70%;
             .box-logo {
                 width: 102px;
                 height: 32px;
@@ -41,16 +43,18 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                h1 {
+                a {
                     font-family: $crimson_pro;
                     font-weight: 200;
                     font-size: 14px;
                     text-transform: uppercase;
+                    text-decoration: none;
+                    color: $white;
                 }
             }
         }
         ul {
-            width: 40%;
+            width: 30%;
             display: flex;
             justify-content: space-between;
             li {
@@ -71,47 +75,110 @@ header {
     }
 }
 
-
 section {
-    width: 100%;
+    width: 83%;
+    display: flex;
+    margin: 10rem auto;
+    margin-bottom: 15rem;
     .box-left {
         width: 50%;
         h1 {
-
+            font-family: $lora;
+            font-weight: 400;
+            font-size: 48px;
+            margin-bottom: 3rem;
         }
         p {
-
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 24px;
+            margin-bottom: 3rem;
         }
-        .more {
-
+        a {
+            font-family: $montserrat;
+            font-weight: 600;
+            font-size: 18px;
+            color: $white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
-        img {
-
+        i {
+            margin-left: 1rem;
+            margin-top: 1rem;
         }
     }
     .box-right {
-        width: 50%;
-        image {
-            img {
-
-            }
+        width: 55%;
+        position: relative;
+        img {
+            float: right;
+            width: 100%;
+            height: 555px;
         }
         .info {
+            width: 410px;
+            height: 189px;
+            background-color: $black;
+            position: absolute;
+            top: 30rem;
+            left: 24.5rem;
+            padding: 1.5rem;
             .person {
-                img {
-
+                display: flex;
+                align-items: center;
+                .image {
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
                 }
-                .name {
-
-                }
-                .pro {
-
+                .person-info {
+                    margin-left: 1rem;
+                    .name {
+                        font-family: $montserrat;
+                        font-weight: 500;
+                        font-size: 14px;
+                        margin-bottom: 0.5rem;
+                    }
+                    .pro {
+                        font-family: $montserrat;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: $gray;
+                    }
                 }
             }
             .title {
-                h4 {
-
+                margin-top: 1rem;
+                a {
+                    font-family: $lora;
+                    font-weight: 700;
+                    font-size: 24px;
+                    text-decoration: none;
+                    color: $white;
                 }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
+    p {
+        font-family: $montserrat;
+        font-weight: 600;
+        font-size: 14px;
+        color: $gray;
+        a {
+            color: $special_color;
+            margin-left: 0.5rem;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
