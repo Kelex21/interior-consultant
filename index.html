@@ -7,6 +7,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@400;700&family=Montserrat:wght@300;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/07c13fcbdb.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="assets/favicon/devchallenges.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
@@ -16,7 +17,6 @@
 <body>
     <!-- Container -->
     <div class="container">
-
         <!-- Header -->
         <header>
             <nav>
@@ -25,6 +25,16 @@
                         <a href="index.html">This Interior</a>
                     </div>
                 </div>
+                <i class="material-icons me-48 icon-menu">menu</i>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-mobile">
+                <i class="material-icons me-48 icon-close">close</i>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Collection</a></li>
@@ -42,7 +52,9 @@
                 <p>A full-Service residential & <br />commercial interior desing and <br />staging company offering
                     <br />professional
                     organizing & <br />eco-services.</p>
-                <a href="#">Read more</a><i class="fas fa-long-arrow-alt-right"></i>
+                <div class="box-read-more">
+                    <a href="#">Read more</a><i class="material-icons md-48 arrow-right">arrow_right_alt</i>
+                </div>
             </div>
             <div class="box-right">
                 <div class="image">
@@ -67,6 +79,7 @@
         <!-- EndSection -->
 
         <footer>
+            <hr class="border">
             <p>Keiler Guardo<a href="https://devchallenges.io/challenges" target="_blank">@DevChallenges</a></p>
         </footer>
     </div>

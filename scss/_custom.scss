@@ -94,19 +94,22 @@ section {
             font-size: 24px;
             margin-bottom: 3rem;
         }
-        a {
-            font-family: $montserrat;
-            font-weight: 600;
-            font-size: 18px;
-            color: $white;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
+        .box-read-more {
+            display: flex;
+            align-items: center;
+            a {
+                font-family: $montserrat;
+                font-weight: 600;
+                font-size: 18px;
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
-        }
-        i {
-            margin-left: 1rem;
-            margin-top: 1rem;
+            .arrow-right {
+                margin-left: 0.7rem;
+            }
         }
     }
     .box-right {
@@ -254,5 +257,124 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    header {
+        width: 100%;
+        margin: -1.5rem auto;
+        padding: 0 1rem;
+        nav {
+            justify-content: space-between;
+            ul {
+                display: none;
+            }
+            .icon-menu {
+                font-size: 35px;
+                color: #f2f2f2;
+            }
+        }
+        .nav-mobile {
+            background-color: $black;
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            display: none;
+            flex-direction: column;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15rem;
+                li {
+                    margin: 1rem 0;
+                    a {
+                        &:hover {
+                            transition: font-weight 0.3s ease;
+                            &:hover {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+            .icon-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 40px;
+                margin: 21px 19px;
+            }
+        }
+    }
+    section {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0.7rem;
+        margin-top: 3.5rem;
+        margin-bottom: 9rem;
+        .box-left {
+            width: 100%;
+            margin-bottom: 2.5rem;
+            p {
+                font-size: 14px;
+                margin-bottom: 1rem;
+            }
+            .box-read-more {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+        .box-right {
+            width: 100%;
+            img {
+                height: 270px;
+            }
+            .info {
+                top: 13rem;
+                left: 2.5rem;
+                width: 300px;
+                height: 138px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .person {
+                    .image {
+                        img {
+                            width: 36px;
+                            height: 36px;
+                        }
+                        .person-info {
+                            .name {
+                                font-size: 12px;
+                            }
+                            .pro {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+                .title {
+                    a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .border {
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 0.7rem;
+        background-color: $gray;
     }
 }

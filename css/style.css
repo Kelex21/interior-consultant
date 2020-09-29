@@ -12,7 +12,7 @@ html {
 
 body {
   background-color: #181719;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 img {
@@ -41,7 +41,7 @@ header nav .logo {
 header nav .logo .box-logo {
   width: 102px;
   height: 32px;
-  border: 1px solid #ffffff;
+  border: 1px solid #FFFFFF;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -53,7 +53,7 @@ header nav .logo .box-logo a {
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 header nav ul {
   width: 35%;
@@ -68,7 +68,7 @@ header nav ul li a {
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
   transition: font-weight 0.3s ease;
 }
 header nav ul li a:hover {
@@ -96,19 +96,22 @@ section .box-left p {
   font-size: 24px;
   margin-bottom: 3rem;
 }
-section .box-left a {
+section .box-left .box-read-more {
+  display: flex;
+  align-items: center;
+}
+section .box-left .box-read-more a {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
 }
-section .box-left a:hover {
+section .box-left .box-read-more a:hover {
   text-decoration: underline;
 }
-section .box-left i {
-  margin-left: 1rem;
-  margin-top: 1rem;
+section .box-left .box-read-more .arrow-right {
+  margin-left: 0.7rem;
 }
 section .box-right {
   width: 60%;
@@ -150,7 +153,7 @@ section .box-right .info .person .person-info .pro {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 12px;
-  color: #a9a9a9;
+  color: #A9A9A9;
 }
 section .box-right .info .title {
   margin-top: 1rem;
@@ -160,7 +163,7 @@ section .box-right .info .title a {
   font-weight: 700;
   font-size: 24px;
   text-decoration: none;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 footer {
@@ -171,7 +174,7 @@ footer p {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 14px;
-  color: #a9a9a9;
+  color: #A9A9A9;
 }
 footer p a {
   color: #F7542E;
@@ -236,6 +239,110 @@ footer p a:hover {
   section .box-right .info .title a {
     font-size: 18px;
   }
+}
+@media screen and (max-width: 375px) {
+  header {
+    width: 100%;
+    margin: -1.5rem auto;
+    padding: 0 1rem;
+  }
+  header nav {
+    justify-content: space-between;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav .icon-menu {
+    font-size: 35px;
+    color: #f2f2f2;
+  }
+  header .nav-mobile {
+    background-color: #181719;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+  }
+  header .nav-mobile ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+  }
+  header .nav-mobile ul li {
+    margin: 1rem 0;
+  }
+  header .nav-mobile ul li a:hover {
+    transition: font-weight 0.3s ease;
+  }
+  header .nav-mobile ul li a:hover:hover {
+    font-weight: 700;
+  }
+  header .nav-mobile .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    margin: 21px 19px;
+  }
+
+  section {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0.7rem;
+    margin-top: 3.5rem;
+    margin-bottom: 9rem;
+  }
+  section .box-left {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  section .box-left p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  section .box-left .box-read-more a {
+    font-size: 14px;
+  }
+  section .box-right {
+    width: 100%;
+  }
+  section .box-right img {
+    height: 270px;
+  }
+  section .box-right .info {
+    top: 13rem;
+    left: 2.5rem;
+    width: 300px;
+    height: 138px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  section .box-right .info .person .image img {
+    width: 36px;
+    height: 36px;
+  }
+  section .box-right .info .person .image .person-info .name {
+    font-size: 12px;
+  }
+  section .box-right .info .person .image .person-info .pro {
+    font-size: 10px;
+  }
+  section .box-right .info .title a {
+    font-size: 18px;
+  }
+}
+footer .border {
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 0.7rem;
+  background-color: #A9A9A9;
 }
 
 /*# sourceMappingURL=style.css.map */
