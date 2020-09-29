@@ -46,6 +46,10 @@ header nav .logo .box-logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border 0.3s ease;
+}
+header nav .logo .box-logo:hover {
+  border: 1px solid #F7542E;
 }
 header nav .logo .box-logo a {
   font-family: "Crimson Pro", serif;
@@ -73,6 +77,12 @@ header nav ul li a {
 }
 header nav ul li a:hover {
   font-weight: 700;
+}
+header nav .icon-menu {
+  display: none;
+}
+header .nav-mobile {
+  display: none;
 }
 
 section {
@@ -106,9 +116,11 @@ section .box-left .box-read-more a {
   font-size: 18px;
   color: #FFFFFF;
   text-decoration: none;
+  transition: margin-right 0.3s ease;
 }
 section .box-left .box-read-more a:hover {
   text-decoration: underline;
+  margin-right: 0.5rem;
 }
 section .box-left .box-read-more .arrow-right {
   margin-left: 0.7rem;
@@ -118,11 +130,15 @@ section .box-right {
   position: relative;
 }
 section .box-right img {
+  opacity: 0;
+  animation: opacity 4s forwards alternate;
   float: right;
   width: 100%;
   height: 555px;
 }
 section .box-right .info {
+  opacity: 0;
+  animation: moveLeft 1.5s forwards alternate;
   width: 410px;
   height: 189px;
   background-color: #181719;
@@ -184,6 +200,9 @@ footer p a {
 footer p a:hover {
   text-decoration: underline;
 }
+footer .border {
+  display: none;
+}
 
 @media screen and (max-width: 1366px) {
   header {
@@ -193,14 +212,20 @@ footer p a:hover {
   section {
     width: 85%;
     margin: 6rem auto;
-    margin-bottom: 15rem;
+    margin-bottom: 13rem;
+  }
+  section .box-left h1 {
+    font-size: 40px;
+  }
+  section .box-left p {
+    font-size: 20px;
   }
   section .box-right img {
-    height: 450px;
+    height: 390px;
   }
   section .box-right .info {
-    top: 23rem;
-    left: 15rem;
+    top: 19.5rem;
+    left: 15.5rem;
   }
 }
 @media screen and (max-width: 1068px) {
@@ -253,10 +278,14 @@ footer p a:hover {
     display: none;
   }
   header nav .icon-menu {
+    display: block;
+    animation: opacity 1s ease forwards backwards;
     font-size: 35px;
     color: #f2f2f2;
   }
   header .nav-mobile {
+    opacity: 0;
+    animation: opacity 0.5s ease forwards;
     background-color: #181719;
     position: absolute;
     margin: 0;
@@ -279,18 +308,20 @@ footer p a:hover {
   header .nav-mobile ul li {
     margin: 1rem 0;
   }
+  header .nav-mobile ul li a {
+    animation: transform 0.5s ease forwards alternate;
+  }
   header .nav-mobile ul li a:hover {
     transition: font-weight 0.3s ease;
-  }
-  header .nav-mobile ul li a:hover:hover {
     font-weight: 700;
   }
   header .nav-mobile .icon-close {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 40px;
-    margin: 21px 19px;
+    font-size: 35px;
+    margin: 1.4rem 1rem;
+    animation: opacity 1s ease forwards both;
   }
 
   section {
@@ -337,12 +368,51 @@ footer p a:hover {
   section .box-right .info .title a {
     font-size: 18px;
   }
+
+  footer .border {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 0.7rem;
+    background-color: #A9A9A9;
+  }
 }
-footer .border {
-  margin: 0 auto;
-  width: 70%;
-  margin-bottom: 0.7rem;
-  background-color: #A9A9A9;
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes transform {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    font-size: 30px;
+    opacity: 1;
+  }
+  75% {
+    font-size: 20px;
+  }
+  100% {
+    font-size: 18px;
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25rem);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
