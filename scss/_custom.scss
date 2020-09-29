@@ -322,8 +322,6 @@ footer {
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            z-index: 1;
             display: none;
             flex-direction: column;
             ul {
@@ -415,6 +413,24 @@ footer {
             width: 70%;
             margin-bottom: 0.7rem;
             background-color: $gray;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile2) {
+    header {
+        .nav-mobile {
+            ul {
+                margin-top: 10rem;
+            }
+        }
+    }
+    section {
+        .box-right {
+            .info {
+                width: 270px;
+                left: 1rem;
+            }
         }
     }
 }

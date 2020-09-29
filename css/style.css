@@ -299,8 +299,6 @@ footer .border {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    z-index: 1;
     display: none;
     flex-direction: column;
   }
@@ -382,6 +380,16 @@ footer .border {
     width: 70%;
     margin-bottom: 0.7rem;
     background-color: #A9A9A9;
+  }
+}
+@media screen and (max-width: 320px) {
+  header .nav-mobile ul {
+    margin-top: 10rem;
+  }
+
+  section .box-right .info {
+    width: 270px;
+    left: 1rem;
   }
 }
 @keyframes opacity {
