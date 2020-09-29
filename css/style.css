@@ -181,6 +181,9 @@ section .box-right .info .title a {
   text-decoration: none;
   color: #FFFFFF;
 }
+section .box-right .info .title a:hover {
+  text-decoration: underline;
+}
 
 footer {
   text-align: center;
@@ -237,22 +240,26 @@ footer .border {
   }
 
   section {
-    margin-bottom: 20rem;
+    margin-bottom: 19rem;
   }
   section .box-left h1 {
-    font-size: 36px;
+    font-size: 35px;
     margin-bottom: 2rem;
   }
   section .box-left p {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 2rem;
   }
+  section .box-left .box-read-more a {
+    font-size: 14px;
+  }
   section .box-right img {
-    height: 420px;
+    width: 100%;
+    height: 350px;
   }
   section .box-right .info {
     width: 350px;
-    top: 21.5rem;
+    top: 17.1rem;
     left: 10.5rem;
   }
   section .box-right .info .person .person-info .name {
